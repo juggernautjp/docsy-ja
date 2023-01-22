@@ -6,6 +6,8 @@ assets/scss/_variables_project.scss
 
 copy from bootstrap/site/assets/scss/_variables.scss
 */
+@import "../vendor/bootstrap/scss/bootstrap/variables";
+
 $bd-purple:        #4c0bce;
 $bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
 $bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%); // stylelint-disable-line function-disallowed-list
