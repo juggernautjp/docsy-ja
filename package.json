@@ -1,7 +1,7 @@
 {
-  "name": "docsy",
-  "version": "0.6.0",
-  "repository": "github:google/docsy",
+  "name": "docsy-ja",
+  "version": "0.1.0",
+  "repository": "github:juggernautjp/docsy",
   "scripts": {
     "_cd:docs": "cd userguide &&",
     "build:preview": "npm run cd:docs build:preview",

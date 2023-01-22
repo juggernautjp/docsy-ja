@@ -1,12 +1,18 @@
-name = "Docsy"
+name = "Docsy-ja"
 license = "Apache 2.0"
-licenselink = "https://github.com/google/docsy/blob/main/LICENSE"
+licenselink = "https://github.com/juggernautjp/docsy-ja/blob/main/LICENSE"
 description = "A Hugo theme for technical documentation sites"
-homepage = "https://docsy.dev"
+homepage = "https://github.com/juggernautjp/docsy-ja/"
 tags = ["documentation", "multilingual", "customizable", "responsive", "docs"]
 features = []
 min_version = 0.53
 
 [author]
-  name = "The Docsy Authors"
-  homepage = "https://docsy.dev"
+  name = "juggernautjp"
+  homepage = "https://github.com/juggernautjp"
+
+# If porting an existing theme
+[original]
+  name = "Docsy v0.6.0"
+  homepage = "https://docsy.dev/"
+  repo = "https://github.com/google/docsy"
