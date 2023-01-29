@@ -1,11 +1,20 @@
 
 {{ $scssMain := "scss/main.scss"}}
+{{ $dartsassOption := (dict "transpiler" "dartsass") -}}
 {{ if not hugo.IsProduction }}
-{{/* Note the missing postCSS. This makes it snappier to develop in Chrome, but makes it look sub-optimal in other browsers. */}}
-{{ $css := resources.Get $scssMain | toCSS (dict "enableSourceMap" true) }}
+  {{/* Note the missing postCSS. This makes it snappier to develop in Chrome, but makes it look sub-optimal in other browsers. */}}
+  {{ $options := (dict "enableSourceMap" true) -}}
+  {{ if .Site.Params.options.dartsass -}}
+    {{ $options := merge $dartsassOption $options -}}
+  {{ end -}}
+{{ $css := resources.Get $scssMain | toCSS $options -}}
 <link href="{{ $css.RelPermalink }}" rel="stylesheet">
 {{ else }}
-{{ $css := resources.Get $scssMain | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
+  {{ $options := (dict "enableSourceMap" false) -}}
+  {{ if .Site.Params.options.dartsass -}}
+    {{ $options := merge $dartsassOption $options -}}
+  {{ end -}}
+{{ $css := resources.Get $scssMain | toCSS $options | postCSS | minify | fingerprint -}}
 <link rel="preload" href="{{ $css.RelPermalink }}" as="style">
 <link href="{{ $css.RelPermalink }}" rel="stylesheet" integrity="{{ $css.Data.integrity }}">
 {{ end }}
