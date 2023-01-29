@@ -1,25 +1,25 @@
 [module]
 _merge = "deep"
 # work around https://github.com/golang/go/issues/37397
-[[module.mounts]]
-  source = "assets/bootstrap/scss/_vendor"
-  target = "assets/vendor/bootstrap/scss/vendor"
+# [[module.mounts]]
+#   source = "assets/bootstrap/scss/_vendor"
+#   target = "assets/vendor/bootstrap/scss/vendor"
 # mount asserts directory
-[[module.mounts]]
-  source = "assets"
-  target = "assets"
+# [[module.mounts]]
+#   source = "assets"
+#   target = "assets"
 # mount i18n directory
-[[module.mounts]]
-  source = "i18n"
-  target = "i18n"
+# [[module.mounts]]
+#   source = "i18n"
+#   target = "i18n"
 # mount layouts directory
-[[module.mounts]]
-  source = "layouts"
-  target = "layouts"
+# [[module.mounts]]
+#   source = "layouts"
+#   target = "layouts"
 # mount static directory
-[[module.mounts]]
-  source = "static"
-  target = "static"
+# [[module.mounts]]
+#   source = "static"
+#   target = "static"
 # Dependencies are brought in as modules
 # and mount points are declared
 [[module.imports]]
