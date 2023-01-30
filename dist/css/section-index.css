@@ -1,0 +1,14 @@
+.section-index .entry {
+  padding: 0.75rem;
+}
+.section-index h5 {
+  margin-bottom: 0;
+}
+.section-index h5 a {
+  font-weight: 700;
+}
+.section-index p {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=section-index.css.map */
